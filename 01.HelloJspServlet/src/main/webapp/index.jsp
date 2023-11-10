@@ -21,7 +21,7 @@
 		<tr>
 			<td>POST 방식</td>
 			<td>
-				<form action="Ex03" method="post">
+				<form action="Ex02_Servlet" method="post">
 					<input type="text" name="param2"> 
 					<input type="submit" value="전송">
 				</form>
