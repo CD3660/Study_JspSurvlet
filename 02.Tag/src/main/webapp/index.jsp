@@ -29,7 +29,7 @@
 		<!-- Navigation-->
 		<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
 			<div class="container px-5">
-				<a class="navbar-brand" href="index.html"><span
+				<a class="navbar-brand" href="index.jsp"><span
 					class="fw-bolder text-primary">JspServlet Tag</span></a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -39,14 +39,13 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-						<li class="nav-item"><a class="nav-link" href="index.html">파리
+						<li class="nav-item"><a class="nav-link" href="index.jsp">홈으로</a></li>
+						<li class="nav-item"><a class="nav-link" href="resume.html">파리
 								생제르맹</a></li>
-						<li class="nav-item"><a class="nav-link" href="resume.html">아르헨티나
+						<li class="nav-item"><a class="nav-link" href="projects.html">아르헨티나
 								국가대표</a></li>
-						<li class="nav-item"><a class="nav-link" href="projects.html">호날두
+						<li class="nav-item"><a class="nav-link" href="contact.html">호날두
 								음해하러 가기</a></li>
-						<li class="nav-item"><a class="nav-link" href="contact.html">메시
-								후원하기</a></li>
 					</ul>
 				</div>
 			</div>
@@ -304,7 +303,7 @@
 			<div class="container px-5 my-5">
 				<div class="text-center mb-5">
 					<h1 class="display-5 fw-bolder mb-0">
-						<span class="text-gradient d-inline">그의 업적</span>
+						<span class="text-gradient d-inline">스크립틀릿 태그(Scriptlet Tag)</span>
 					</h1>
 				</div>
 				<div class="row gx-5 justify-content-center">
@@ -313,31 +312,60 @@
 						<section>
 							<div
 								class="d-flex align-items-center justify-content-between mb-4">
-								<h2 class="text-primary fw-bolder mb-0">클럽 경력</h2>
+								<h2 class="text-primary fw-bolder mb-0">태그 처음 사용</h2>
 							</div>
 							<!-- Experience Card 1-->
-							<div class="card shadow border-0 rounded-4 mb-5">
-								<div class="card-body p-5">
+							<div class="card shadow border-0 rounded-4 mb-4">
+								<div class="card-body p-3">
 									<div class="row align-items-center gx-5">
 										<div class="col text-center text-lg-start mb-4 mb-lg-0">
 											<div class="bg-light p-4 rounded-4">
-												<div class="text-primary fw-bolder mb-2">2010 - 2021</div>
-												<div class="small fw-bolder">FC 바르셀로나</div>
-												<div class="small text-muted">No.10</div>
-												<div class="small text-muted">Barcelona, Spain</div>
+												<div class="text-primary fw-bolder mb-2">1. 태그 처음 사용</div>
 											</div>
 										</div>
 										<div class="col-lg-8">
-											<div>바르셀로나의 프랜차이즈 스타로 소속 팀과 리그 역대 최다 득점, 최다 도움, 최다 출장,
-												최다 우승, 최다 승리 기록자이다. 또한 라리가 득점왕 8회, UEFA 챔피언스리그 득점왕 6회, 코파 델
-												레이 득점왕 5회, 발롱도르 7회, FIFA 올해의 선수 6회, 유러피언 골든슈 6회 등의 개인 기록과
-												라리가 우승 10회, UEFA 챔피언스리그 우승 4회, 코파 델 레이 우승 7회 등의 팀 커리어를 달성한
-												라리가와 구단 역사상 명실상부 최고의 선수이다.</div>
+											<a href="01.script/ex00Into.jsp">태그와 변수 이용</a>
+											<br><br>
+											<a href="01.script/ex01Var.jsp">여러 변수 선언, 할당, 출력</a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<!-- Experience Card 2-->
+							<div class="card shadow border-0 rounded-4 mb-4">
+								<div class="card-body p-3">
+									<div class="row align-items-center gx-5">
+										<div class="col text-center text-lg-start mb-4 mb-lg-0">
+											<div class="bg-light p-4 rounded-4">
+												<div class="text-primary fw-bolder mb-2">2. 제어문</div>
+											</div>
+										</div>
+										<div class="col-lg-8">
+											<a href="01.script/ex02For.jsp">For문</a>
+											<p></p>
+											<a href="01.script/ex02If.jsp">If문</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Experience Card 3-->
+							<div class="card shadow border-0 rounded-4 mb-4">
+								<div class="card-body p-3">
+									<div class="row align-items-center gx-5">
+										<div class="col text-center text-lg-start mb-4 mb-lg-0">
+											<div class="bg-light p-4 rounded-4">
+												<div class="text-primary fw-bolder mb-2">3. 실습</div>
+											</div>
+										</div>
+										<div class="col-lg-8">
+											<a href="01.script/ex03TestForIf.jsp">For문 If문 합 구하기</a>
+											<p></p>
+											<a href="01.script/ex04ForFor.jsp">구구단 만들기</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Experience Card 4-->
 							<div class="card shadow border-0 rounded-4 mb-5">
 								<div class="card-body p-5">
 									<div class="row align-items-center gx-5">
@@ -441,7 +469,8 @@
 											</div>
 											<div class="col">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">플레이 메이킹</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">플레이
+													메이킹</div>
 											</div>
 										</div>
 										<div class="row row-cols-1 row-cols-md-3">
@@ -451,11 +480,13 @@
 											</div>
 											<div class="col mb-4 mb-md-0">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">오프 더 볼</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">오프
+													더 볼</div>
 											</div>
 											<div class="col">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">부상 빈도</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">부상
+													빈도</div>
 											</div>
 										</div>
 									</div>
@@ -473,29 +504,35 @@
 										<div class="row row-cols-1 row-cols-md-3 mb-4">
 											<div class="col mb-4 mb-md-0">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">라리가 10회 우승</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">라리가
+													10회 우승</div>
 											</div>
 											<div class="col mb-4 mb-md-0">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">리그앙 2회 우승</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">리그앙
+													2회 우승</div>
 											</div>
 											<div class="col">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">챔피언스리그 4회 우승</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">챔피언스리그
+													4회 우승</div>
 											</div>
 										</div>
 										<div class="row row-cols-1 row-cols-md-3">
 											<div class="col mb-4 mb-md-0">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">월드컵 1회 우승</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">월드컵
+													1회 우승</div>
 											</div>
 											<div class="col mb-4 mb-md-0">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">발롱도르 8회 수상</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">발롱도르
+													8회 수상</div>
 											</div>
 											<div class="col">
 												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">FIFA 올해의 선수 7회 수상</div>
+													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">FIFA
+													올해의 선수 7회 수상</div>
 											</div>
 										</div>
 									</div>
