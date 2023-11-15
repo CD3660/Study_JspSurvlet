@@ -313,7 +313,7 @@
 						<section>
 							<div
 								class="d-flex align-items-center justify-content-between mb-4">
-								<h2 class="text-primary fw-bolder mb-0">Script Tag</h2>
+								<h2 class="text-primary fw-bolder mb-0">Request(요청)</h2>
 							</div>
 							<!-- Script Card 1-->
 							<div class="card shadow border-0 rounded-4 mb-4">
@@ -321,243 +321,18 @@
 									<div class="row align-items-center gx-5">
 										<div class="col text-center text-lg-start mb-4 mb-lg-0">
 											<div class="bg-light p-4 rounded-4">
-												<div class="text-primary fw-bolder mb-2">1. 태그 처음 사용</div>
+												<div class="text-primary fw-bolder mb-2">페이지 요청하기</div>
 											</div>
 										</div>
 										<div class="col-lg-8">
-											<a href="01.script/ex00Into.jsp">태그와 변수 이용</a>
-											<br><br>
-											<a href="01.script/ex01Var.jsp">여러 변수 선언, 할당, 출력</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Script Card 2-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-primary fw-bolder mb-2">2. 제어문</div>
-											</div>
-										</div>
-										<div class="col-lg-8">
-											<a href="01.script/ex02For.jsp">For문</a>
-											<p></p>
-											<a href="01.script/ex02If.jsp">If문</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Script Card 3-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-primary fw-bolder mb-2">3. 실습</div>
-											</div>
-										</div>
-										<div class="col-lg-8">
-											<a href="01.script/ex03TestForIf.jsp">For문 If문 합 구하기</a>
-											<p></p>
-											<a href="01.script/ex04ForFor.jsp">구구단 만들기</a>
-											<p></p>
-											<a href="01.script/etcMethod.jsp">메소드</a>
+											<a href="ex01_req" class="d-block">Controller에 요청(Servlet)</a>
+											<a href="request/ex01req.jsp" class="d-block">태그와 변수 이용</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</section>
-						<!-- Directive Section-->
-						<section>
-							<h2 class="text-secondary fw-bolder mb-4">Directive Tag</h2>
-							<!-- Directive Card 1-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-secondary fw-bolder mb-2">1.디렉티브 태그</div>
-											</div>
-										</div>
-										<div class="col-lg-8">
-											<a href="02.directive/Ex01_Directive.jsp">1.디렉티브 기본 설정</a>
-											<p></p>
-											<a href="02.directive/Ex02_ErrorMain.jsp">2.에러 페이지</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Directive Card 2-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-secondary fw-bolder mb-2">2.디렉티브 인클루드</div>
-											</div>
-										</div>
-										<div class="col-lg-8">
-											<a href="02.directive/Ex03_Main.jsp">1.붙이기 header, footer</a>
-											<p></p>
-											<a href="02.directive/Ex04_Main.jsp">2.붙이기 header, footer</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<!-- Action Section -->
-						<section>
-							<h2 class="text-success fw-bolder mb-4">Action Tag</h2>
-							<!-- Action Card 1-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-success fw-bolder mb-2">액션 포워드(Forward)</div>
-											</div>
-										</div>
-										<div class="col-lg-8">
-											<a href="03.action/Ex01_Forward.jsp">1.포워드</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Action Card 2-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-success fw-bolder mb-2">JSP include</div>
-											</div>
-										</div>
-										<div class="col-lg-8">
-											<a href="03.action/Ex02_Include.jsp">1.JSP include</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Action Card 3-->
-							<div class="card shadow border-0 rounded-4 mb-4">
-								<div class="card-body p-3">
-									<div class="row align-items-center gx-5">
-										<div class="col text-center text-lg-start mb-4 mb-lg-0">
-											<div class="bg-light p-4 rounded-4">
-												<div class="text-success fw-bolder mb-2">Bean객체(JSP)</div>
-											</div>
-										</div>
-										<div class="col-lg-8"><div>
-										JSP(Spring) Bean 객체 핵심이 되는 내용이지만 JSP 코드로는 사용이 매우 불편하다.
-										스프링 기능 없이 만드는 것 가체가 매우 불편하다.
-										객체를 항상 new로 초기화 x -> Spring 속성을 이용해서 자동으로 설정을 로딩해서 객체로 만드는 용도로 사용된다.
-										</div></div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<!-- Divider-->
 						<div class="pb-5"></div>
-						<!-- Skills Section-->
-						<section>
-							<!-- Skillset Card-->
-							<div class="card shadow border-0 rounded-4 mb-5">
-								<div class="card-body p-5">
-									<!-- Professional skills list-->
-									<div class="mb-5">
-										<div class="d-flex align-items-center mb-4">
-											<div
-												class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-												<i class="bi bi-tools"></i>
-											</div>
-											<h3 class="fw-bolder mb-0">
-												<span class="text-gradient d-inline">그의 기술</span>
-											</h3>
-										</div>
-										<div class="row row-cols-1 row-cols-md-3 mb-4">
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">드리블</div>
-											</div>
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">득점력</div>
-											</div>
-											<div class="col">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">플레이
-													메이킹</div>
-											</div>
-										</div>
-										<div class="row row-cols-1 row-cols-md-3">
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">프리킥</div>
-											</div>
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">오프
-													더 볼</div>
-											</div>
-											<div class="col">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">부상
-													빈도</div>
-											</div>
-										</div>
-									</div>
-									<!-- Languages list-->
-									<div class="mb-0">
-										<div class="d-flex align-items-center mb-4">
-											<div
-												class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-												<i class="bi bi-code-slash"></i>
-											</div>
-											<h3 class="fw-bolder mb-0">
-												<span class="text-gradient d-inline">그의 기록</span>
-											</h3>
-										</div>
-										<div class="row row-cols-1 row-cols-md-3 mb-4">
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">라리가
-													10회 우승</div>
-											</div>
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">리그앙
-													2회 우승</div>
-											</div>
-											<div class="col">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">챔피언스리그
-													4회 우승</div>
-											</div>
-										</div>
-										<div class="row row-cols-1 row-cols-md-3">
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">월드컵
-													1회 우승</div>
-											</div>
-											<div class="col mb-4 mb-md-0">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">발롱도르
-													8회 수상</div>
-											</div>
-											<div class="col">
-												<div
-													class="d-flex align-items-center bg-light rounded-4 p-3 h-100">FIFA
-													올해의 선수 7회 수상</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
 					</div>
 				</div>
 			</div>
@@ -591,7 +366,7 @@
 			<div
 				class="row align-items-center justify-content-between flex-column flex-sm-row">
 				<div class="col-auto">
-					<div class="small m-0">Copyright &copy; Your Website 2023</div>
+					<div class="small m-0">Copyright &copy; CDWebsite 2023</div>
 				</div>
 				<div class="col-auto">
 					<a class="small" href="#!">Privacy</a> <span class="mx-1">&middot;</span>
