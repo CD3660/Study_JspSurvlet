@@ -32,6 +32,7 @@ public class Ex02_Req extends HttpServlet {
 		list.add("data4");
 		list.add("data5");
 		
+		req.setAttribute("key", "data");
 		req.setAttribute("list", list);
 		
 		rd.forward(req, resp);
