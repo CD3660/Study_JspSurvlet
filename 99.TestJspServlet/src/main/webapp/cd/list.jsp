@@ -19,8 +19,8 @@
 		<div class="container">
 			<!-- Portfolio Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-secondary mb-0">조회
-				화면</h2>
+				class="page-section-heading text-center text-uppercase text-secondary mb-0">회원
+				조회</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -52,7 +52,8 @@
 								<td style="width: 20%"><a
 									href="update?userNo=${dto.userNo }" class="btn btn-primary">정보수정</a></td>
 								<td style="width: 20%"><a
-									href="delete?userNo=${dto.userNo }" class="btn btn-danger" onclick="return confirm('${dto.userName}를 삭제하시겠습니까?')">회원삭제</a></td>
+									href="delete?userNo=${dto.userNo }" class="btn btn-danger"
+									onclick="return confirm('${dto.userName}을(를) 삭제하시겠습니까?')">회원삭제</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

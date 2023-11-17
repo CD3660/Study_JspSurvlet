@@ -14,13 +14,11 @@
 </head>
 <body id="page-top" onload="active()">
 	<%@ include file="/include/header.jsp"%>
-	<!-- Portfolio Section-->
-	<section class="page-section portfolio">
+	<section class="page-section" id="contact">
 		<div class="container">
-			<!-- Portfolio Section Heading-->
+			<!-- Contact Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-secondary mb-0">추가
-				화면</h2>
+				class="page-section-heading text-center text-uppercase text-secondary mb-0">회원 등록</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -29,28 +27,47 @@
 				</div>
 				<div class="divider-custom-line"></div>
 			</div>
-			<!-- table -->
-			<div class="divider-custom">
-				<form style="width: 50%" action="doinsert" method="post">
-					<div class="form-group">
-						<label for="exampleInputEmail1">번호</label> <input type="number"
-							class="form-control" placeholder="번호 입력" name="userNo">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">이름</label> <input type="text"
-							class="form-control" placeholder="이름 입력" name="userName">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">생년월일</label> <input type="number"
-							class="form-control" placeholder="생년월일" name="birthday">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">혈액형</label> <input type="text"
-							class="form-control" placeholder="혈액형" name="bloodType">
-					</div>
-					<input type="submit" class="btn btn-primary" value="추가">
-				</form>
+			<!-- Contact Section Form-->
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-xl-7">
+					<!-- * * * * * * * * * * * * * * *-->
+					<!-- * * SB Forms Contact Form * *-->
+					<!-- * * * * * * * * * * * * * * *-->
+					<!-- This form is pre-integrated with SB Forms.-->
+					<!-- To make this form functional, sign up at-->
+					<!-- https://startbootstrap.com/solution/contact-forms-->
+					<!-- to get an API token!-->
+					<form id="contactForm" action="doinsert" method="post">
+						<!-- userNo input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="no" type="number" name="userNo"
+								placeholder="Enter your name..." data-sb-validations="required" />
+							<label for="no">번호</label>
+							<div class="invalid-feedback" data-sb-feedback="no:required">번호는
+								필수입니다.</div>
+						</div>
+						<!-- userName input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="name" type="text" name="userName"
+								placeholder="Enter your name..." data-sb-validations="required" />
+							<label for="name">이름</label>
+							<div class="invalid-feedback" data-sb-feedback="name:required">이름은
+								필수입니다.</div>
+						</div>
+						<!-- userName input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="birthday" type="number"
+								name="birthday" placeholder="" /> <label for="birthday">생년월일</label>
 
+						</div>
+						<!-- userName input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="bloodtype" type="text"
+								name="bloodType" placeholder="" /> <label for="bloodtype">혈액형</label>
+						</div>
+						<input type="submit" value="등록" class="btn btn-primary">
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>

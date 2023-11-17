@@ -29,7 +29,7 @@
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="#page-top">Test Jsp Servlet</a>
+			<a class="navbar-brand" href="index.jsp">Test Jsp Servlet</a>
 			<button
 				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 				type="button" data-bs-toggle="collapse"
@@ -45,8 +45,6 @@
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="insert">추가</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a id="update"
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="list">수정</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a id="delete"
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="list">삭제</a></li>
 				</ul>
 			</div>
 		</div>

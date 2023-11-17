@@ -14,13 +14,11 @@
 </head>
 <body id="page-top" onload="active()">
 	<%@ include file="/include/header.jsp"%>
-	<!-- Portfolio Section-->
-	<section class="page-section portfolio">
+	<section class="page-section" id="contact">
 		<div class="container">
-			<!-- Portfolio Section Heading-->
+			<!-- Contact Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-secondary mb-0">추가
-				화면</h2>
+				class="page-section-heading text-center text-uppercase text-secondary mb-0">회원 정보 수정</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -29,30 +27,49 @@
 				</div>
 				<div class="divider-custom-line"></div>
 			</div>
-			<!-- table -->
-			<div class="divider-custom">
-				<form style="width: 50%" action="doupdate" method="post">
-					<div class="form-group">
-						<label for="exampleInputEmail1">번호</label> <input type="hidden"
-							class="form-control" name="userNo" value="${dto.userNo}">
-						<p>${dto.userNo}</p>
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">이름</label> <input type="hidden"
-							class="form-control" name="userName" value="${dto.userName}">
-						<p>${dto.userName}</p>
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">생년월일</label> <input type="number"
-							class="form-control" name="birthday" value="${dto.birthday}">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">혈액형</label> <input type="text"
-							class="form-control" value="${dto.bloodType}" name="bloodType">
-					</div>
-					<input type="submit" class="btn btn-primary" value="수정">
-				</form>
-
+			<!-- Contact Section Form-->
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-xl-7">
+					<!-- * * * * * * * * * * * * * * *-->
+					<!-- * * SB Forms Contact Form * *-->
+					<!-- * * * * * * * * * * * * * * *-->
+					<!-- This form is pre-integrated with SB Forms.-->
+					<!-- To make this form functional, sign up at-->
+					<!-- https://startbootstrap.com/solution/contact-forms-->
+					<!-- to get an API token!-->
+					<form id="contactForm" action="doupdate" method="post">
+						<!-- userNo input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="no" type="text" name="userNo"
+								placeholder="Enter your name..." data-sb-validations="required"
+								value="${dto.userNo}" onfocus="this.blur()" /> <label for="no">번호</label>
+							<div class="invalid-feedback" data-sb-feedback="no:required">번호는
+								필수입니다.</div>
+						</div>
+						<!-- userName input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="name" type="text" name="userName"
+								value="${dto.userName}" onfocus="this.blur()"
+								placeholder="Enter your name..." data-sb-validations="required" />
+							<label for="name">이름</label>
+							<div class="invalid-feedback" data-sb-feedback="name:required">이름은
+								필수입니다.</div>
+						</div>
+						<!-- userName input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="birthday" type="number"
+								value="${dto.birthday}" name="birthday" placeholder="" /> <label
+								for="birthday">생년월일</label>
+						</div>
+						<!-- userName input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="bloodtype" type="text"
+								value="${dto.bloodType}" name="bloodType" placeholder="" /> <label
+								for="bloodtype">혈액형</label>
+						</div>
+						<input type="submit" value="수정" class="btn btn-primary">
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>
