@@ -75,7 +75,7 @@ public class UserTblDAO {
 	}
 
 	// 회원정보수정
-	public boolean updateOne(UserTblDTO dto) {
+	public boolean update(UserTblDTO dto) {
 		if (!isConnection()) return false;
 		try {
 			ps = conn.prepareStatement("update usertbl set birth_year = ?, address= ?, MOBILE = ? where user_name=?");
@@ -91,4 +91,36 @@ public class UserTblDAO {
 		}
 		return false;
 	}
+
+	public boolean delete(String userName) {
+		if (!isConnection()) return false;
+		try {
+			ps = conn.prepareStatement("delete from usertbl where user_name = ?");
+			ps.setString(1, userName);
+			if(ps.executeUpdate()>=1) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public boolean insert(UserTblDTO dto) {
+		if (!isConnection()) return false;
+		try {
+			ps = conn.prepareStatement("insert into usertbl (user_name, birth_year, address, MOBILE) values (?, ?, ?, ?)");
+			ps.setString(1, dto.getUserName());
+			ps.setInt(2, dto.getBirthYear());
+			ps.setString(3, dto.getAddress());
+			ps.setString(4, dto.getMobile());
+			if(ps.executeUpdate()>=1) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 }

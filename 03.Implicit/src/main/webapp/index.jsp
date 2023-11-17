@@ -304,18 +304,14 @@
 		<div class="container px-5 my-5">
 				<div class="text-center mb-5">
 					<h1 class="display-5 fw-bolder mb-0">
-						<span class="text-gradient d-inline">스크립트 태그(Script Tag)</span>
+						<span class="text-gradient d-inline">Request(요청)</span>
 					</h1>
 				</div>
 				<div class="row gx-5 justify-content-center">
 					<div class="col-lg-11 col-xl-9 col-xxl-8">
-						<!-- Script Section-->
+						<!-- experience Section-->
 						<section>
-							<div
-								class="d-flex align-items-center justify-content-between mb-4">
-								<h2 class="text-primary fw-bolder mb-0">Request(요청)</h2>
-							</div>
-							<!-- Script Card 1-->
+							<!-- experience Card 1-->
 							<div class="card shadow border-0 rounded-4 mb-4">
 								<div class="card-body p-3">
 									<div class="row align-items-center gx-5">
@@ -326,7 +322,21 @@
 										</div>
 										<div class="col-lg-8">
 											<a href="ex01_req" class="d-block">Controller에 요청(Servlet)</a>
-											<a href="request/ex01req.jsp" class="d-block">태그와 변수 이용</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- experience Card 2-->
+							<div class="card shadow border-0 rounded-4 mb-4">
+								<div class="card-body p-3">
+									<div class="row align-items-center gx-5">
+										<div class="col text-center text-lg-start mb-4 mb-lg-0">
+											<div class="bg-light p-4 rounded-4">
+												<div class="text-primary fw-bolder mb-2">CRUD 해보기</div>
+											</div>
+										</div>
+										<div class="col-lg-8">
+											<a href="list" class="d-block">목록 조회 화면</a>
 										</div>
 									</div>
 								</div>

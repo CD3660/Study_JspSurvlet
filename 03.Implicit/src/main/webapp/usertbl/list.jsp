@@ -9,6 +9,7 @@
 </head>
 <body>
 	<%@ include file="/include/header.jsp"%>
+	<a href="newpage" class="btn btn-info">생성</a>
 	<table class="table">
 		<thead class="thead-dark">
 			<tr>
@@ -16,6 +17,7 @@
 				<th scope="col">출생년도</th>
 				<th scope="col">주소</th>
 				<th scope="col">전화번호</th>
+				<th scope="col" style="color:red;">삭제</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -25,6 +27,7 @@
 					<td>${dto.birthYear}</td>
 					<td>${dto.address}</td>
 					<td>${dto.mobile}</td>
+					<td><a href="delete?userName=${dto.userName}" class="btn btn-danger">삭제</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

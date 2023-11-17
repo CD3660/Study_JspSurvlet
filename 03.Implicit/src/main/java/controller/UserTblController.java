@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import usertbl.UserTblDAO;
 import usertbl.UserTblDTO;
 
-@WebServlet(name = "usertbl", urlPatterns = { "/list", "/detail", "/update" })
+@WebServlet(name = "usertbl", urlPatterns = { "/list", "/detail", "/update", "/delete", "/newpage", "/insert" })
 public class UserTblController extends HttpServlet {
 	RequestDispatcher rd;
 
@@ -33,13 +33,27 @@ public class UserTblController extends HttpServlet {
 			dto.setBirthYear(Integer.parseInt(req.getParameter("birthYear")));
 			dto.setAddress(req.getParameter("address"));
 			dto.setMobile(req.getParameter("mobile"));
+			dao.update(dto);
 			
-			if(dao.updateOne(dto)) {
-				System.out.println("성공");
-			} else {
-				System.out.println("실패");
-			}
-//			rd = req.getRequestDispatcher("usertbl/detail.jsp");
+			resp.sendRedirect("list");
+			return;
+		} else if ("/delete".equals(req.getServletPath())) {
+			String userName = req.getParameter("userName");
+			dao.delete(userName);
+			resp.sendRedirect("list");
+			return;
+		} else if ("/newpage".equals(req.getServletPath())) {
+			rd = req.getRequestDispatcher("usertbl/newpage.jsp");
+		} else if ("/insert".equals(req.getServletPath())) {
+			UserTblDTO dto = new UserTblDTO();
+			dto.setUserName(req.getParameter("userName"));
+			dto.setBirthYear(Integer.parseInt(req.getParameter("birthYear")));
+			dto.setAddress(req.getParameter("address"));
+			dto.setMobile(req.getParameter("mobile"));
+			dao.insert(dto);
+			
+			resp.sendRedirect("list");
+			return;
 		}
 		rd.forward(req, resp);
 	}
