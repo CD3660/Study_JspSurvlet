@@ -20,7 +20,7 @@ public class Controller extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		usertbl2DAO dao = new usertbl2DAO();
-
+		
 		if ("/list".equals(req.getServletPath())) {
 			req.setAttribute("list", dao.selectList());
 			rd = req.getRequestDispatcher("cd/list.jsp");
