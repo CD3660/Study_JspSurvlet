@@ -39,6 +39,9 @@ public class Control extends HttpServlet {
 			System.out.println(req.getParameter("b"));
 			req.setAttribute("a", req.getParameter("a")+"1");
 			req.setAttribute("b", req.getParameter("b")+"1");
+		} else if (req.getServletPath().equals("/insertnew.cd")) {
+			rd = req.getRequestDispatcher("cd/insert.jsp");
+			
 		} else {
 			resp.getWriter().println("오류");
 		}

@@ -11,5 +11,8 @@
 	<h1>insert</h1>
 	<h4>${a }</h4>
 	<h4>${b }</h4>
+	<form action="insertnew.cd">
+		<input type="submit">
+	</form>
 </body>
 </html>
