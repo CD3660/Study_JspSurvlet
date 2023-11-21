@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mymapper">
+	<select id="select1" resultType="Integer">
+		select 100 from dual
+	</select>
+	<insert id="insert">
+		insert into mybatistbl (col1, col2, col3) values (#{col1}, #{col2}, #{col3})
+	</insert>
+	<update id="update">
+		update mybatistbl set col3 = col1||'update' where col1='abc'
+	</update>
+	<delete id="delete">
+		delete from mybatistbl where col1='abc'
+	</delete>
+	
+</mapper>

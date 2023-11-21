@@ -162,7 +162,7 @@
 
       
       
-      <Context docBase="98.TestJspServlet" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:98.TestJspServlet"/></Host>
+      <Context docBase="04.Mybatis" path="/my" reloadable="true" source="org.eclipse.jst.jee.server:04.Mybatis"/></Host>
     </Engine>
   </Service>
 </Server>
