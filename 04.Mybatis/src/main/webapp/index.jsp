@@ -11,5 +11,7 @@
 	<a href="insert.my">추가</a>
 	<a href="update.my">수정</a>
 	<a href="delete.my">삭제</a>
+	<br>
+	<a href="home.mytbl">mytbl home</a>
 </body>
 </html>
