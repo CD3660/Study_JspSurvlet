@@ -162,7 +162,7 @@
 
       
       
-      <Context docBase="04.Mybatis" path="/my" reloadable="true" source="org.eclipse.jst.jee.server:04.Mybatis"/></Host>
+      <Context docBase="05.MybatisMVC" path="/mvc" reloadable="true" source="org.eclipse.jst.jee.server:05.MybatisMVC"/></Host>
     </Engine>
   </Service>
 </Server>

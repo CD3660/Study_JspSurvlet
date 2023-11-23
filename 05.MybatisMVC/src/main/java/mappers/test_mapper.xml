@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="testmapper">
+	<select id="select1" resultType="Integer">
+		select 100 from dual
+	</select>
+	<select id="select2" resultType="String">
+		select 'result' from dual
+	</select>
+	<select id="selectVO" resultType="mybatis.MybatisVO">
+		select 'abc' param1, 'def' param2 from dual
+	</select>
+	<select id="selectVOList" resultType="mybatis.MybatisVO">
+		select 'abc' param1, 'def' param2 from dual
+		UNION ALL
+		select 'ABC' param1, 'DEF' param2 from dual
+	</select>
+	<select id="param1" resultType="String">
+		select #{param} str from dual
+	</select>
+	<select id="param2" resultType="Integer">
+		select #{param}+10 result from dual
+	</select>
+	<select id="params" resultType="mybatis.MybatisVO">
+		select #{param1}||' db' param1, #{param2}||' db' param2 from dual
+	</select>
+	<insert id="insert">
+		insert into mybatistbl (col1, col2) values (#{param1}, #{param2})
+	</insert>
+	<update id="update">
+		update mybatistbl set col3 = col1||'update' where col1='abc'
+	</update>
+	<delete id="delete">
+		delete from mybatistbl where col1='abc'
+	</delete>
+	
+</mapper>

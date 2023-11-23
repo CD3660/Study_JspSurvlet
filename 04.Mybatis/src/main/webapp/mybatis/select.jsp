@@ -21,16 +21,6 @@
 					<td>${vo.col3 }</td>
 				<tr>
 			</c:forEach>
-	</table>
-	<table border="1px solid" style="align-self: center">
-		<c:forEach items="${list }" var="vo">
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</c:forEach>
-	</table>
-	
+	</table>	
 </body>
 </html>
