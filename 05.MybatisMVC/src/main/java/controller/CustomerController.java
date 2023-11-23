@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="customerController", urlPatterns = {"*.cu", "/"})
+@WebServlet("*.cu")
 public class CustomerController extends HttpServlet {
 	RequestDispatcher rd;
 
@@ -18,7 +18,7 @@ public class CustomerController extends HttpServlet {
 		if (req.getServletPath().equals("/list.cu")) {
 			rd = req.getRequestDispatcher("customer/list.jsp");
 			rd.forward(req, resp);
-		} else if (req.getServletPath().equals("/")) {
+		} else if (req.getServletPath().equals("/home.cu")) {
 			rd = req.getRequestDispatcher("index.jsp");
 			rd.forward(req, resp);
 		}

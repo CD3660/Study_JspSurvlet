@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -31,12 +30,12 @@
 <body id="page-top">
 	<video class="w-100 h-100" src="assets/img/visual.mp4" autoplay loop
 		muted
-		style="position: absolute; top: 0px; left: 0px; object-fit: cover; opacity: 0.3;"></video>
+		style="position: absolute; top: 0px; left: 0px; object-fit: cover; z-index: -1;"></video>
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3"
 		id="mainNav">
 		<div class="container px-4 px-lg-5">
-			<a class="navbar-brand" href="#page-top">MybatisMVC</a>
+			<a class="navbar-brand" href="home.cu">MybatisMVC</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
 				aria-controls="navbarResponsive" aria-expanded="false"
@@ -45,7 +44,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto my-2 my-lg-0">
-					<li class="nav-item"><a class="nav-link" href="#about">고객
+					<li class="nav-item"><a class="nav-link" href="list.cu">고객
 							관리</a></li>
 					<li class="nav-item"><a class="nav-link" href="#services">HR조회</a></li>
 					<li class="nav-item"><a class="nav-link" href="#portfolio">JSTL연습</a></li>
@@ -66,7 +65,7 @@
 				</div>
 				<div class="col-lg-8 align-self-baseline">
 					<p class="text-white-75 mb-5">Study</p>
-					<a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+					<a class="btn btn-primary btn-xl" href="https://cd3660.tistory.com/">CD3660 Blog</a>
 				</div>
 			</div>
 		</div>
