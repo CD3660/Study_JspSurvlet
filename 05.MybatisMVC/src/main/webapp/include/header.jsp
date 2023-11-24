@@ -28,9 +28,7 @@
 <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
-	<video class="w-100 h-100" src="assets/img/visual.mp4" autoplay loop
-		muted
-		style="position: absolute; top: 0px; left: 0px; object-fit: cover; z-index: -1;"></video>
+
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3"
 		id="mainNav">
@@ -55,7 +53,12 @@
 		</div>
 	</nav>
 	<!-- Masthead-->
-	<header class="masthead">
+	<header class="masthead position-relative">
+		<div class="w-100 h-100 bg-black" 
+			style="position: absolute; top: 0px; left: 0px; z-index: -2"></div>
+		<video class="w-100 h-100" src="assets/img/visual.mp4" autoplay loop
+			muted
+			style="position: absolute; top: 0px; left: 0px; object-fit: cover; opacity: 0.7; z-index: -1;"></video>
 		<div class="container px-4 px-lg-5 h-100">
 			<div
 				class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -65,7 +68,8 @@
 				</div>
 				<div class="col-lg-8 align-self-baseline">
 					<p class="text-white-75 mb-5">Study</p>
-					<a class="btn btn-primary btn-xl" href="https://cd3660.tistory.com/">CD3660 Blog</a>
+					<a class="btn btn-primary btn-xl"
+						href="https://cd3660.tistory.com/">CD3660 Blog</a>
 				</div>
 			</div>
 		</div>
