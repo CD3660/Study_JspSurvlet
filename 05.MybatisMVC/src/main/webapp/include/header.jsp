@@ -26,6 +26,11 @@
 	rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+	integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+	crossorigin="anonymous">
+	
+</script>
 </head>
 <body id="page-top">
 
@@ -54,7 +59,7 @@
 	</nav>
 	<!-- Masthead-->
 	<header class="masthead position-relative">
-		<div class="w-100 h-100 bg-black" 
+		<div class="w-100 h-100 bg-black"
 			style="position: absolute; top: 0px; left: 0px; z-index: -2"></div>
 		<video class="w-100 h-100" src="assets/img/visual.mp4" autoplay loop
 			muted
