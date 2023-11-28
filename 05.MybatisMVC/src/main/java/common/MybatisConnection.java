@@ -14,9 +14,28 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class MybatisConnection {
 	protected SqlSession sql;
 	
-	public MybatisConnection() {
-		System.out.println("싱글톤");
-		String resource = "mybatis/config.xml";
+	public enum Connection{
+		CONNECTION,
+		DISCONNECTION,
+		ING
+	}
+	
+	public enum DataResource{
+		HANUL("common/hanulconfig.xml"),
+		HR("common/hrconfig.xml");
+		private final String config;
+		private DataResource(String config) {
+			this.config = config;
+		}
+		public String getConfig() {
+			return config;
+		}
+		
+	}
+	
+	public MybatisConnection(DataResource res) {
+		String resource = res.getConfig();
+		
 		InputStream inputStream;
 		try {
 			inputStream = Resources.getResourceAsStream(resource);

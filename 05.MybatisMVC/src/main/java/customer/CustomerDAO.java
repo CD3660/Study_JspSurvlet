@@ -5,6 +5,10 @@ import java.util.List;
 import common.MybatisConnection;
 
 public class CustomerDAO extends MybatisConnection{
+	
+	public CustomerDAO() {
+		super(DataResource.HANUL);
+	}
 	public void test(){
 		int result = sql.selectOne("cu.test");
 		System.out.println(result);

@@ -5,7 +5,7 @@
 <html>
 
 <%@ include file="/include/header.jsp"%>
-<h3>고객 목록을 보여줍니다.</h3>
+
 <section class="page-section">
 	<div class="container">
 		<button type="button" class="btn btn-dark align-middle"

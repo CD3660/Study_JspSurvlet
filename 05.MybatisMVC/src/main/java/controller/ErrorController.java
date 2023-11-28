@@ -15,6 +15,8 @@ public class ErrorController extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("에러");
+//		Integer code = (Integer) req.getAttribute("javax.servlet.error.status_code");
+		
 		if(req.getServletPath().equals("/404.er")) {
 			rd = req.getRequestDispatcher("error/404.jsp");
 			rd.forward(req, resp);
