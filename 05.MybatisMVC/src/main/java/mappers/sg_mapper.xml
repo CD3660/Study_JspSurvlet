@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sg">
+	<select id="test" resultType="integer">
+		select 7 from dual
+	</select>
+	<select id="select" resultType="sg.SgVO">
+		select e.EMPLOYEE_ID,
+		e.FIRST_NAME, e.LAST_NAME , e.EMAIL, e.PHONE_NUMBER, e.hire_date,
+		e.SALARY, d.DEPARTMENT_NAME
+		from EMPLOYEES e left outer join
+		DEPARTMENTS d on
+		e.department_id = d.department_id
+		order by
+		e.EMPLOYEE_ID asc
+	</select>
+	<select id="selectD" resultType="sg.DepartmentVO">
+		select department_id,
+		DEPARTMENT_NAME
+		from DEPARTMENTS
+	</select>
+	<insert id="insert">
+		insert into EMPLOYEES (employee_id, first_name,
+		last_name, email,phone_number,hire_date ,salary, department_id)
+		values
+		(SEQ_EMPLOYEE_ID.nextval,
+		#{first_name},#{last_name},#{email},#{phone_number},#{hire_date},#{salary},#{department_id})
+	</insert>
+	<update id="update">
+		update EMPLOYEES
+		set first_name = #{first_name}, last_name =#{last_name}, email =
+		#{email},
+		phone_number = #{phone_number}, hire_date = #{hire_date},
+		salary = #{salary},
+		department_id = #{department_id} where employee_id
+		= #{employee_id}
+	</update>
+	<delete id="delete">
+		delete from EMPLOYEES where employee_id =
+		#{employee_id}
+	</delete>
+</mapper>

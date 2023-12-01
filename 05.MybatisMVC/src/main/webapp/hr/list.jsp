@@ -8,6 +8,26 @@
 
 <section class="page-section">
 	<div class="container">
+		<form class="row g-3" action="list.hr" method="get">
+			<div class="col-auto">
+				<div class="dropdown">
+					<select class="form-select" aria-label="Default select example"
+						name="option" >
+						<option value="all" ${option eq 'all' ? 'selected' : ''}>전체</option>
+						<option value="name" ${option eq 'name' ? 'selected' : ''}>이름</option>
+						<option value="department_name" ${option eq 'department_name' ? 'selected' : ''}>부서명</option>
+						<option value="job_title" ${option eq 'all' ? 'job_title' : ''}>업무명</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-auto">
+				<input type="text" class="form-control" placeholder="검색어를 입력하세요." value="${keyword}"
+					name="keyword">
+			</div>
+			<div class="col-auto">
+				<input type="submit" class="btn btn-primary mb-3" value="검색" />
+			</div>
+		</form>
 		<table class="table table-striped">
 			<thead>
 				<tr>

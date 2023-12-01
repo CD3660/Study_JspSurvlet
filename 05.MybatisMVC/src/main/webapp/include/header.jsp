@@ -50,8 +50,8 @@
 					<li class="nav-item"><a class="nav-link" href="list.cu">고객
 							관리</a></li>
 					<li class="nav-item"><a class="nav-link" href="list.hr">HR조회</a></li>
-					<li class="nav-item"><a class="nav-link" href="#portfolio">JSTL연습</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact">혼자
+					<li class="nav-item"><a class="nav-link" href="list.jstl">JSTL연습</a></li>
+					<li class="nav-item"><a class="nav-link" href="list.sg">혼자
 							해보기</a></li>
 				</ul>
 			</div>

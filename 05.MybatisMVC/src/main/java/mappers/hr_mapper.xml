@@ -8,11 +8,32 @@
 	</select>
 	<select id="select" resultType="hr.HrVO">
 		select e.EMPLOYEE_ID, e.FIRST_NAME||' '||e.LAST_NAME
-		name, e.EMAIL, to_char(e.HIRE_DATE, 'yyyy-mm-dd') hire, e.SALARY,
-		d.department_name, j.job_title
+		name, e.EMAIL,
+		to_char(e.HIRE_DATE, 'yyyy-mm-dd') hire, e.SALARY,
+		d.department_name,
+		j.job_title
 		from employees e
-		left OUTER JOIN departments d on e.department_id = d.department_id
-		left outer join jobs j on e.job_id = j.job_id
+		left OUTER JOIN departments d on
+		e.department_id = d.department_id
+		left outer join jobs j on e.job_id =
+		j.job_id
+		where 1=1
+
+		<if test="option != null">
+			<choose>
+				<when test="option == 'all'">
+					and upper(e.FIRST_NAME||e.LAST_NAME) like '%'||upper(#{keyword})||'%'
+					or upper(j.job_title) like '%'||upper(#{keyword})||'%'
+					or upper(d.department_name) like '%'||upper(#{keyword})||'%'
+				</when>
+				<when test="option == 'name'">
+					and upper(e.FIRST_NAME||e.LAST_NAME) like '%'||upper(#{keyword})||'%'
+				</when>
+				<otherwise>
+					and upper(${option}) like '%'||upper(#{keyword})||'%'
+				</otherwise>
+			</choose>
+		</if>
 		order by e.employee_id
 	</select>
 
