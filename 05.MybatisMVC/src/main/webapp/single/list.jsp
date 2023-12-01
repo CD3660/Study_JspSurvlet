@@ -168,7 +168,7 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">취소</button>
-							<input type="submit" class="btn btn-primary" value="수정" />
+							<input type="submit" class="btn btn-primary" value="수정"/>
 						</div>
 					</form>
 				</div>
