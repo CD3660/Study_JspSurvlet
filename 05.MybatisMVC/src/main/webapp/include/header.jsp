@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -54,6 +55,20 @@
 					<li class="nav-item"><a class="nav-link" href="list.sg">혼자
 							해보기</a></li>
 				</ul>
+				<c:choose>
+					<c:when test="${empty loginInfo }">
+						<ul class="navbar-nav ms-auto my-2 my-lg-0">
+							<li class="nav-item"><a class="nav-link" href="loginpage.me">로그인</a></li>
+							<li class="nav-item"><a class="nav-link" href="joinpage.me">회원가입</a></li>
+					</ul>
+					</c:when>
+					<c:otherwise>
+						<ul class="navbar-nav ms-auto my-2 my-lg-0">
+						<li class="nav-item">
+						<span class="nav-link">${loginInfo.name}님 환영합니다.</span><a class="nav-link" href="logout.me">로그아웃</a></li>
+						</ul>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</nav>

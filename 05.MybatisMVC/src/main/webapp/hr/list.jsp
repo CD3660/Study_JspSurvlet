@@ -5,7 +5,6 @@
 <html lang="ko">
 
 <%@ include file="/include/header.jsp"%>
-
 <section class="page-section">
 	<div class="container">
 		<form class="row g-3" action="list.hr" method="get">
