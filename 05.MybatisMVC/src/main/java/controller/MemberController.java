@@ -1,5 +1,7 @@
 package controller;
 
+import static org.junit.jupiter.api.Assumptions.abort;
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import common.test;
 import common.test2;
 import member.MemberDAO;
+import member.MemberDAO_Id;
 import member.MemberService;
 import member.MemberVO;
 
@@ -22,8 +25,6 @@ public class MemberController extends HttpServlet {
 	MemberService service;
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
-		resp.setCharacterEncoding("UTF-8");
 		String path = req.getServletPath();
 		if(path.equals("/loginpage.me")) {
 			rd = req.getRequestDispatcher("member/login.jsp");
@@ -47,6 +48,29 @@ public class MemberController extends HttpServlet {
 		} else if(path.equals("/joinpage.me")) {
 			rd = req.getRequestDispatcher("member/join.jsp");
 			rd.forward(req, resp);
+		} else if(path.equals("/join.me")) {
+			MemberVO vo = new MemberVO();
+			vo.setUser_id(req.getParameter("user_id"));
+			vo.setUser_pw(req.getParameter("user_pw"));
+			vo.setName(req.getParameter("name"));
+			vo.setEmail(req.getParameter("email"));
+			vo.setBirth(req.getParameter("birth"));
+			vo.setAddress(req.getParameter("address"));
+			vo.setPhone(req.getParameter("phone"));
+			vo.setPost(req.getParameter("post"));
+			service = new MemberDAO();
+			System.out.println(service.member_join(vo));
+			
+		} else if(path.equals("/idCheck.me")) {
+			service = new MemberDAO_Id();
+			
+			if(service.member_idCheck(req.getParameter("user_id"))==0) {
+				System.out.println(0);
+				resp.getWriter().print("0");
+			} else {
+				System.out.println(1);
+				resp.getWriter().print("1");
+			}
 		}
 	}
 }

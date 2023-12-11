@@ -42,7 +42,7 @@
 			<div class="card card-4">
 				<div class="card-body">
 					<h2 class="title">회원가입</h2>
-					<form method="POST">
+					<form method="get" action="join.me" autocomplete="off">
 						<div class="row row-space">
 							<div class="col-2">
 								<div class="input-group">
@@ -50,13 +50,22 @@
 										class="input--style-4" type="text" name="name" id="name">
 								</div>
 							</div>
+
+						</div>
+						<div class="row row-space">
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label" for="user_id">아이디</label> <input
 										class="input--style-4" type="text" name="user_id" id="user_id">
 								</div>
 							</div>
-
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label">아이디 중복 확인</label><a
+										class="btn btn--radius-2 btn--primary" id="check_id">아이디
+										체크</a>
+								</div>
+							</div>
 						</div>
 						<div class="row row-space">
 							<div class="col-2">
@@ -121,8 +130,7 @@
 							</div>
 						</div>
 						<div class="p-t-15">
-							<a class="btn btn--radius-2 btn--primary" onclick="">회원가입</a>
-							<p class="btn btn--radius-2 btn--primary">회원가입</p>
+							<a class="btn btn--radius-2 btn--primary" id="btn_join">회원가입</a>
 						</div>
 					</form>
 				</div>
@@ -134,21 +142,68 @@
 	<script
 		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
+		
 	</script>
 	<script type="text/javascript">
-		$('#btn_post').click(function() {
-			new daum.Postcode({
-				oncomplete : function(data) {
-					var address = data.userSelectedType == 'R'? data.roadAddress : data.jibunAddress;
-					
-					$('#address').val(address);
-					$('#post').val(data.zonecode);
-				}
-			}).open();
-		});
-		function join() {
+		$('#btn_post')
+				.click(
+						function() {
+							new daum.Postcode(
+									{
+										oncomplete : function(data) {
+											var address = data.userSelectedType == 'R' ? data.roadAddress
+													: data.jibunAddress;
 
-		}
+											$('#address').val(address);
+											$('#post').val(data.zonecode);
+										}
+									}).open();
+						});
+		$('#btn_join').click(function() {
+			if (!$('#user_id').hasClass('checked')) {
+				alert('아이디 중복확인을 해주세요');
+				return;
+			}
+
+			console.log('유효성 검사');
+			/* if($('#user_pw').val() != $('user_pw_check').val()){
+				console.log('비밀번호 불일치');
+				$('#user_pw').focus();
+				return;
+			} */
+			$('form').submit();
+		});
+		$('#check_id').click(function() {
+			console.log($('#user_id').val());
+			if ($('#user_id').val() == '') {
+				alert('아이디를 입력 해 주세요');
+				$('#user_id').focus();
+				return;
+			}
+			if ($('#user_id').val().length >= 5) {
+				$.ajax({
+					url : 'idCheck.me',
+					data : {
+						user_id : $('#user_id').val()
+					},
+					success : function(res) {
+						console.log(res);
+						if (res == 0) {
+							alert('사용 가능한 아이디 입니다.');
+							$('#user_id').addClass('checked');
+						} else {
+							alert('사용할 수 없는 아이디 입니다.');
+						}
+					},
+					error : function(req, text) {
+						console.log(req.status);
+					}
+				})
+			} else {
+				alert('5글자 이상 입력해주세요.');
+				return;
+			}
+		});
 	</script>
 
 
