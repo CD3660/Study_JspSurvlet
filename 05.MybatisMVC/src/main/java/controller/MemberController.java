@@ -1,7 +1,5 @@
 package controller;
 
-import static org.junit.jupiter.api.Assumptions.abort;
-
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -11,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import common.test;
-import common.test2;
 import member.MemberDAO;
 import member.MemberDAO_Id;
 import member.MemberService;
