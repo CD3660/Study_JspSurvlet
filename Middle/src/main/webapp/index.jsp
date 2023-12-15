@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>메인화면</h1>
+	<a href="login.me?param1=aaa&param2=aaa">asdsadas</a>
 </body>
 </html>

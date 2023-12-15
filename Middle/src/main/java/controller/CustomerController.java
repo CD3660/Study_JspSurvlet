@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
 import customer.CustomerDAO;
-import customer.CustomerDTO;
+import customer.CustomerVO;
 
 @WebServlet("*.cu")
 public class CustomerController extends HttpServlet {
@@ -22,8 +22,16 @@ public class CustomerController extends HttpServlet {
 		if(path.equals("customer.cu")) {
 			
 			
-			List<CustomerDTO> list = new CustomerDAO().selectList();
+			List<CustomerVO> list = new CustomerDAO().customerList(req.getParameter("query"));
 			resp.getWriter().println(new Gson().toJson(list));
+		} else if(path.equals("delete.cu")) {
+			
+			int result = new CustomerDAO().delete(Integer.parseInt(req.getParameter("customer_id")));
+			resp.getWriter().println(new Gson().toJson(result));
+		} else if(path.equals("update.cu")) {
+			System.out.println("업데이트");
+			int result = new CustomerDAO().update(new Gson().fromJson(req.getParameter("customerVO"), CustomerVO.class));
+			resp.getWriter().println(new Gson().toJson(result));
 		}
 	}
 }

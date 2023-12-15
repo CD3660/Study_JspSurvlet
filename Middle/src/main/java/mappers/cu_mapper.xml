@@ -6,9 +6,17 @@
 	<select id="test" resultType="integer">
 		select 7 from dual
 	</select>
-	<select id="customer" resultType="customer.CustomerDTO">
+	<select id="customer" resultType="customer.CustomerVO">
 		select CUSTOMER_ID, NAME, GENDER, EMAIL, PHONE
 		from CUSTOMER
+		<if test="query != null">
+			where upper(name) like '%'||upper(#{query})||'%' or CUSTOMER_ID like '%'||#{query}||'%'
+		</if>
 	</select>
-	
+	<delete id="delete">
+		delete from CUSTOMER where CUSTOMER_ID = #{customer_id}
+	</delete>
+	<update id="update">
+		update CUSTOMER set NAME = #{name}, EMAIL = #{email} where CUSTOMER_ID = #{customer_id}
+	</update>
 </mapper>
