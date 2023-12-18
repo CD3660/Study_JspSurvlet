@@ -30,12 +30,8 @@ public class MemberController extends HttpServlet {
 			MemberDAO dao = new MemberDAO();
 			vo = dao.login(vo);
 			if(vo == null) {
-				System.out.println("로그인 실패");
 			} else {
-				System.out.println("로그인 성공");
-				System.out.println(vo.getName());
 				String json = new Gson().toJson(vo);
-				System.out.println(json);
 				resp.getWriter().println(json);
 			}
 		}

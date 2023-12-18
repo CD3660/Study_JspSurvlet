@@ -162,7 +162,7 @@
 
       
       
-      <Context docBase="Middle" path="/mid" reloadable="true" source="org.eclipse.jst.jee.server:Middle"/></Host>
+      <Context docBase="Middle" path="/mid" reloadable="true" source="org.eclipse.jst.jee.server:Middle"/><Context docBase="D:\mid" path="/mid/file" reloadable="true"/></Host>
     </Engine>
   </Service>
 </Server>
