@@ -20,7 +20,6 @@ import javax.servlet.http.Part;
 @MultipartConfig //<- MultiPart 처리는 CommonFileUpload 등 servlet 3.0 이상은 MultipartConfig만 있어도 됨
 public class FileController extends HttpServlet {
 
-
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Part part = req.getPart("andFile");
